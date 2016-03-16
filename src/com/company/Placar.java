@@ -8,7 +8,7 @@ package com.company;
 public class Placar {
     private int[] tabelaNumeros = new int[10];
     private int score = 0;
-    String excecao = "";
+    private String excecao = "";
 
     /**
      * Adiciona uma sequencia de dados em uma determinada posição do placar. Após a chamada, aquela posição torna-se
