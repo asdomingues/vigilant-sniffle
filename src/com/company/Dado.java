@@ -1,5 +1,3 @@
-package com.company;
-
 import java.lang.String;
 
 /**
@@ -39,14 +37,6 @@ public class Dado {
      * @return o numero do ultimo lado selecionado.
      */
     public int getLado () { return this.ultimoLado; }
-
-    /**
-     * Nao tem funcao real dentro da classe.
-     * @param args sem uso.
-     */
-    public static void main (String[] args) {
-
-    }
 
     /**
      * Simula a rolagem de um dado por meio de um gerador aleatorio.

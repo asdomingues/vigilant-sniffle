@@ -1,5 +1,3 @@
-package com.company;
-
 import java.io.IOException;
 
 /**
@@ -19,8 +17,8 @@ public class Bozo {
         RolaDados d = new RolaDados (5);
         int[] valores;
         String roll;
-        int pos;
-        boolean correct;
+        int pos = 0;
+        boolean correct, aNumber;
 
         for (i = 0; i < 10; i++) {
 
@@ -46,10 +44,25 @@ public class Bozo {
             correct = false;
             while (!correct){
 
-                correct = true;
                 System.out.println (p.toString());
-                System.out.printf ("Selecione a posição que a sua jogada deverá ocupar: ");
-                pos = EntradaTeclado.leInt ();
+                
+                aNumber = false;
+                while (!aNumber) {
+
+                    System.out.printf ("Selecione a posição que a sua jogada deverá ocupar: ");
+                    aNumber = true;
+                    try {
+                        pos = EntradaTeclado.leInt ();
+                    }
+                    
+                    catch (Exception ex) {
+                        System.out.println ("Valor inválido!");
+                        aNumber = false;
+                    }
+
+                }
+                
+                correct = true;
                 try {
                     p.add (pos, valores);
                 }
